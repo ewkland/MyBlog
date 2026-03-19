@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F0F0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.blog{
+    margin: auto;
+    max-width: 800px;
+}
+
+.center {
+    margin: 30px auto;
+    max-width: 700px;
+    padding: 0 16px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: #FFB173;
+    text-align: center;
+}
+
+.card{
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+a {
+    color: #FFB173;
+    text-decoration: none;
+}
+
+.btn {
+    color: #FFB173;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.buttons a {
+    margin-right: 25px;
+}
+
+.buttons a:last-child {
+    margin-right: 0;
+}
+
+.back-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.post {
+    max-width: 800px;
+    margin: auto;
+}
+
+.author{
+    color: gray;
+    text-align: right;
+}
+
+.error {
+    color: #c0392b;
+    background: rgba(192,57,43,0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.delete-link {
+    color: #FFB173;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.delete-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.edited {
+    color: gray;
+    font-size: 14px;
+    text-align: right;
+    margin-top: -10px;
+}
+
+.special {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

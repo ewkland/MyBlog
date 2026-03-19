@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="post center">
+        <h1>{{ post.title }}</h1>
+
+        {% if post.edited %}
+            <p class="edited">Изменено</p>
+        {% endif %}
+
+        <p>{{ post.content }}</p>
+        <p class="author">By: {{ post.username }}</p>
+
+        {% if current_user.is_authenticated and (current_user.id|int == post.author_id|int) %}
+            <a href="{{ url_for('edit_post', post_id=post.id) }}" class="btn">Edit</a>
+
+            <a href="#" onclick="document.getElementById('deleteForm').submit();" class="btn">Delete</a>
+            <form id="deleteForm" method="POST"
+                  action="{{ url_for('delete_post', post_id=post.id) }}"
+                  style="display:none;"></form>
+        {% endif %}
+
+        {% if current_user.is_authenticated %}
+            <div class="like-container">
+                <a href="{{ url_for('like_post', post_id=post.id) }}" class="btn">
+                    {% if post.is_liked %}
+                        <img src="/static/like.png" height="25">
+                    {% else %}
+                        <img src="/static/nonlike.png" height="25">
+                    {% endif %}
+                </a>
+                <span class="likes-count">{{ post.likes }} likes</span>
+            </div>
+        {% else %}
+            <span class="likes-count">{{ post.likes }} likes</span>
+        {% endif %}
+
+        <div class="back-btn-container">
+            <a href="{{ url_for('index') }}" class="btn">Back to blog</a>
+        </div>
+    </div>
+</body>
+</html>

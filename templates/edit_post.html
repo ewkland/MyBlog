@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit post</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="center">
+    <h1>Edit post</h1>
+
+    {% if message %}
+        <p class="error">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" value="{{ post.title }}" required>
+
+        <label>Content:</label>
+        <textarea rows="10" name="content" required>{{ post.content }}</textarea>
+
+        <button type="submit" class="special">Edit</button>
+    </form>
+
+    <div class="back-btn-container">
+        <a href="{{ url_for('post', post_id=post.id) }}" class="btn">Back</a>
+    </div>
+</div>
+
+</body>
+</html>
